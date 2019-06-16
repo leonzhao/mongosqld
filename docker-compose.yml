@@ -1,0 +1,37 @@
+---
+version: '3.7'
+
+services:
+
+  mongosqld:
+    image: mongosqld:centos
+    container_name: mongosqld
+    build: Dockerfile
+    restart: "no"
+    expose:
+      - 3307
+    ports:
+      - target: 3307
+        published: 3307
+        protocol: tcp
+        mode: host
+    volumes:
+      - type: bind
+        source: ./logs
+        target: /logs
+      - type: bind
+        source: ./configs/config.yaml
+        target: /config.yaml
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - target: 27017
+        published: 27017
+        protocol: tcp
+        mode: host
+    # volumes:
+    #   - type: bind
+    #     source: ./mongo-data
+    #     target: /data/db
