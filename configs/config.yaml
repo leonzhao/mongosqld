@@ -25,7 +25,7 @@ net:
 mongodb:
   # versionCompatibility: <string>
   net:
-    uri: "mongodb://mongo:27017" # https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri
+    uri: "mongodb://127.0.0.1:27017" # https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri
     ssl:
       enabled: false
     ## https://docs.mongodb.com/bi-connector/master/reference/mongosqld/#mongodb-tls-ssl-options

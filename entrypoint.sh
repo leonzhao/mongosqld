@@ -18,4 +18,4 @@ fi
 #mongosqld "$MONGOSQL_FLAGS"
 # exec "mongosqld $MONGOSQL_FLAGS" "$@"
 # exec mongosqld "$MONGOSQL_FLAGS"
-exec mongosqld --config config.yaml
+exec mongosqld --config configs/config.yaml
